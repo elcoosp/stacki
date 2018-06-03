@@ -1,0 +1,31 @@
+{
+  "name": "stacki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "c": "git-cz",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elcoosp/stacki.git"
+  },
+  "keywords": [],
+  "author": "elcoosp <elcoosp@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elcoosp/stacki/issues"
+  },
+  "homepage": "https://github.com/elcoosp/stacki#readme",
+  "devDependencies": {
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "jest": "^23.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
