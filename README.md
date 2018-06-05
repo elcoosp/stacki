@@ -10,23 +10,19 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Known Vulnerabilities](https://snyk.io/test/github/elcoosp/stacki/badge.svg)](https://snyk.io/test/github/elcoosp/stacki)
 
-
 Stacki super repository.
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Support](#support)
-- [Contributing](#contributing)
-
-## Installation
-
-`npm i -S stacki`
+- [Stacki](#stacki)
+  - [Table of Contents](#table-of-contents)
+  - [Usage](#usage)
+  - [Support](#support)
+  - [Contributing](#contributing)
 
 ## Usage
 
-Read the docs !
+Todo: Add documentation
 
 ## Support
 
