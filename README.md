@@ -10,7 +10,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Known Vulnerabilities](https://snyk.io/test/github/elcoosp/stacki/badge.svg)](https://snyk.io/test/github/elcoosp/stacki)
 
-Stacki super repository.
+Stacki is a little tiny stack waiting to be popped.
 
 ## Table of Contents
 
