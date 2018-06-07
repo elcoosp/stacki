@@ -2,17 +2,17 @@ const StackiBase = require('./StackiBase')
 
 const Stacki = (...items) => {
   const _stack = [...items]
-  const pop = () => (_stack.pop(), newStack)
-  const push = (...xs) => (_stack.push(...xs), newStack)
+  const pop = () => (_stack.pop(), self)
+  const push = (...xs) => (_stack.push(...xs), self)
 
-  const newStack = Object.assign(
+  const self = Object.assign(
     {
       pop,
       push
     },
     StackiBase(_stack)
   )
-  return newStack
+  return self
 }
 
 module.exports = Stacki

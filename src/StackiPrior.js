@@ -9,13 +9,13 @@ const StackiPrior = (priorityDeepness, prioritizer, ...items) => {
   const getNextToPop = () =>
     _stack.slice(-priorityDeepness).sort(prioritizer)[0]
 
-  const push = (...xs) => (_stack.push(...xs), newStackiPrior)
+  const push = (...xs) => (_stack.push(...xs), self)
 
-  const pop = () => (spliceOneEqualTo(getNextToPop, _stack), newStackiPrior)
+  const pop = () => (spliceOneEqualTo(getNextToPop, _stack), self)
 
   const popReturned = () => spliceOneEqualTo(getNextToPop, _stack)[0]
 
-  const newStackiPrior = Object.assign(
+  const self = Object.assign(
     {
       pop,
       push,
@@ -29,7 +29,7 @@ const StackiPrior = (priorityDeepness, prioritizer, ...items) => {
     StackiBase(_stack)
   )
 
-  newStackiPrior.it.shallowPop[Symbol.iterator] = function*() {
+  self.it.shallowPop[Symbol.iterator] = function*() {
     const shallowStack = _stack.slice()
     const getNextToPop = () =>
       shallowStack.slice(-priorityDeepness).sort(prioritizer)[0]
@@ -39,13 +39,13 @@ const StackiPrior = (priorityDeepness, prioritizer, ...items) => {
     }
   }
 
-  newStackiPrior.it.deepPop[Symbol.iterator] = function*() {
+  self.it.deepPop[Symbol.iterator] = function*() {
     while (_stack.length > 0) {
       yield popReturned()
     }
   }
 
-  return newStackiPrior
+  return self
 }
 
 module.exports = StackiPrior
