@@ -1,4 +1,4 @@
-const StackiPrior = require('../StackiPrior')
+const StackiPrior = require('../src/StackiPrior')
 let s
 const baseStack = [1, 2, 3, 4, 5, 6]
 beforeEach(() => {
@@ -17,8 +17,7 @@ test('should push items and return the stacki object', () => {
 })
 
 test('should pop the item matching the prioritizer (executed for the priority deepness of the stack) and return the stacki object', () => {
-  s
-    .pop()
+  s.pop()
     .push(7)
     .pop()
   expect(s.get()).toEqual([1, 2, 3, 6, 7])

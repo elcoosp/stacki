@@ -1,4 +1,4 @@
-const StackiBase = require('../StackiBase')
+const StackiBase = require('../src/StackiBase')
 let s
 beforeEach(() => {
   s = StackiBase([])
